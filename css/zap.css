@@ -1,0 +1,124 @@
+main#zap.active{
+    left: 0;
+}
+main#zap {
+    transition: all 0.5s;
+    left: -400px;
+    background: #333;
+    position: fixed;
+    bottom: 0;
+    width: 400px;
+    max-width: 50vw;
+    height: 700px;
+    max-height: 80vh;
+    overflow: hidden;
+    border-radius: 15px;
+    color:#fff;
+}
+button.btn-zap{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 9999;
+    border: none;
+        width: 50px;
+        
+        border-radius: 50%;
+        background: #277a27;
+        color: #fff;
+        aspect-ratio: 1/1;
+}
+main#zap header {
+    background: #222;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-sizing: border-box;
+
+    & h1 {
+        font-size: 0.75rem;
+    }
+}
+
+main#zap div.cont-mensagem::-webkit-scrollbar {
+    width: 5px;
+}
+main#zap div.cont-mensagem {
+    /* background:red; */
+    height: 80%;
+    padding: 20px;
+    box-sizing: border-box;
+    max-height: 80%;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    & div.mensagem:has(div.send) {
+        align-self: flex-end;
+    }
+    & div.mensagem {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        /* background: blue; */
+        margin-bottom: 10px;
+        width:auto;
+        & div {
+            box-sizing: border-box;
+            padding: 10px 5px;
+            & p {
+                /* background-color: red; */
+                width: 100%;
+                margin: 0;
+            }
+            & span {
+                display: block;
+                text-align: right;
+                width: 100%;
+                font-size: 0.75rem;
+                /* background:red; */
+            }
+        }
+
+        & p,
+        span {
+            width: auto;
+        }
+
+        & div.send {
+            background: #277a27;
+            border-radius: 10px 10px 0 10px;
+        }
+        & div.receive {
+            background: #5d665d;
+            border-radius: 0px 10px 10px 10px;
+        }
+    }
+}
+
+main#zap div.cont-input{
+    display: flex;
+    /* background: red; */
+    height:10%;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    & input{
+        border: none;
+        width: 70%;
+        border-radius:20px;
+        padding: 10px 15px;
+        color: #fff;;
+        background: #222;
+    }
+    & button{
+        border: none;
+        width: 15%;
+        
+        border-radius: 50%;
+        background: #277a27;
+        color: #fff;
+        aspect-ratio: 1/1;
+    }
+}
